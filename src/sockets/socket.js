@@ -34,6 +34,7 @@ const socket = (server) =>{
         socket.on('disconnect',()=>{
           console.log(socket.handshake.headers.nickname+' disconnected')
           removeUser(socket.id)
+          io.emit('user-disconnected', socket.id)
           io.emit('online-users',getOnlineUsers())
         })
 
