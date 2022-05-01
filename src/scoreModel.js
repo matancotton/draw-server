@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const scoreSchma = new mongoose.Schema({
-    score: Number,
+    points: Number,
     time: Number
 })
 

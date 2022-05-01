@@ -23,7 +23,7 @@ const socket = (server) =>{
 
         socket.on('update-score', async (session) => {
           try {
-            const score = new Score({ score: session.totalScore, time: session.totalTime })
+            const score = new Score({ points: session.totalScore, time: session.totalTime })
             await score.save()
             
           } catch (err) {
